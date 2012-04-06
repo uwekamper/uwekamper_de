@@ -1,0 +1,38 @@
+{% extends "skeleton/_body.html" %}
+
+{%hyde
+    title: "Uwe Kamper"
+    created: 2009-02-01 18:09:05
+    listing: True
+%}
+
+{% block content_header %}
+{% endblock %}
+
+{% block content_body %}
+<div class="hero-unit">
+  <h1>Software Developer and Geek-for-Hire</h1>
+  <address>
+	<strong>Uwe Kamper</strong><br />
+	Leberstr. 56<br />
+	D-10829 Berlin, Germany
+  </address>
+	<p>
+    <a class="btn btn-primary btn-large">
+      Hire me!
+    </a>
+  </p>
+</div>
+<!-- <h2>Recent Posts</h2>
+
+	{%recent_posts recents 5 %}
+
+	<ul>
+		{%for post in recents %}
+			<li>
+				<a href='{{post.url}}'>{{post.title}}</a>
+			</li>
+		{%endfor%}
+	</ul> -->
+
+{%endblock%}

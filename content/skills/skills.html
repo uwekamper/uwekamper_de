@@ -1,0 +1,76 @@
+{% extends "_staticpage.html" %}
+
+{%hyde
+    title: "Skills"
+%}
+
+{% block extra_js %}
+<script src="{{site.url}}/media/js/skills.js"></script>
+{% endblock %}
+
+{% block article %}
+<div class="row" id="skills_container">
+  <div class="span8">
+	<div id="skills_list">
+		<div id="load_message">
+			Loading …<br />
+			<div class="progress progress-striped active">
+		  		<div class="bar" style="width: 100%;"></div>
+			</div>
+		</div>
+	</div>
+  </div>
+  <div class="span4">
+	<div class="well">
+	<form>
+		
+		<div class="input-prepend">
+			<span class="add-on"><i class="icon-search"></i></span><input type="text" class="input-medium search-query" placeholder="Search skills…" id="skills_search">
+		</div>
+	  
+	</form>
+	<h3>Skill Levels</h3>
+	<dl class="dl-horizontal">
+		<dt><i class="icon-star"></i></dt>
+		<dd>Beginner</dd>
+		<dt><i class="icon-star"></i><i class="icon-star"></i></dt>
+		<dd>Intermediate</dd>
+		<dt><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></dt>
+		<dd>Expert</dd>
+		<dt><i class="icon-heart"></i></dt>
+		<dd>I <i>love</i> working with this technology.</dd>
+	</dl>
+	</div><!-- end well -->
+  </div>
+</div>
+
+<!-- Templates -->
+<script type="text/template" id="skills_template">
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Skill&nbsp;Level</th>
+		</tr>
+	</thead>
+	<tbody>
+	<% _.each(skills, function(skill) { %> 
+		<tr>
+			<td><%= skill.name %></td>
+			<td><%= skill.description %> <a href="#">more</a></td>
+			<td>
+				<% for(var i = 0; i < skill.level; i++) { %><i class="icon-star"></i><% } %>
+				<% if(skill.love) { %><i class="icon-heart"></i><% } %>
+			</td>
+		</tr>
+	<% }); %>
+	</tbody>
+</table>
+</script>
+
+<script type="text/template" id="search_template">
+	<ul><li>Brumpf!</li></ul>
+</script>
+
+{% endblock %}

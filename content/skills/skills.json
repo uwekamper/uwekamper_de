@@ -1,0 +1,18 @@
+[
+	{ 
+		"name": "Java", 
+		"description": "Java is a general-purpose, concurrent, class-based, object-oriented language that is specifically designed to have as few implementation dependencies as possible.",
+		"level": 3,
+		"love": false
+	}, { 
+		"name": "Python", 
+		"description": "Python is a general-purpose, high-level programming language whose design philosophy emphasizes code readability.",
+		"level": 3,
+		"love": true
+	}, 	{ 
+		"name": "JavaScript", 
+		"description": "The language of the web.",
+		"level": 2,
+		"love": true
+	}
+]

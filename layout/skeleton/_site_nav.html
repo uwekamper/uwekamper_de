@@ -1,0 +1,31 @@
+{% extends "skeleton/_root.html" %}
+
+{% block all %}
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#">{{site.name}}</a>
+      <div class="nav-collapse">
+        <ul class="nav">
+	      <li{% ifequal page.module site.module %} class="active" {% endifequal %}>
+	        <a href="{{site.listing_url}}"><i class="icon-home icon-white"></i>&nbsp;Home</a>
+	      </li>
+          
+		  {% for module in site.children %}
+          	<li{% ifequal page.module module %} class="active" {% endifequal %}>
+				<a href="{{module.listing_url}}">{{module.name|unslugify}}</a>
+			</li>
+		  {% endfor %}
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
+
+{% endblock %}
