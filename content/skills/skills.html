@@ -6,6 +6,12 @@
 
 {% block extra_js %}
 <script src="{{site.url}}/media/js/skills.js"></script>
+<script>        
+$(document).ready(function () {
+	var main_view = new SkillListView();
+	
+});     
+</script>
 {% endblock %}
 
 {% block article %}
@@ -45,7 +51,26 @@
 </div>
 
 <!-- Templates -->
-<script type="text/template" id="skills_template">
+<!-- Template for one entry in the -->
+<script type="text/template" id="skill_template">
+	<il>
+		<span class="skill_name"><%= name %></span>, <%= description %>,
+		<% for(var i = 0; i < level; i++) { %><i class="icon-star"></i><% } %>
+		<% if(love) { %><i class="icon-heart"></i><% } %>
+	</li>
+</script>
+<script type="text/template" id="skill_template2">
+<tr>
+	<td><%= skill.name %></td>
+	<td><%= skill.description %> <a href="#">more</a></td>
+	<td>
+		<% for(var i = 0; i < skill.level; i++) { %><i class="icon-star"></i><% } %>
+		<% if(skill.love) { %><i class="icon-heart"></i><% } %>
+	</td>
+</tr>
+</script>
+
+<script type="text/template" id="skillapp_template">
 <table class="table table-striped">
 	<thead>
 		<tr>
