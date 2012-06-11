@@ -1,17 +1,73 @@
 [
 	{ 
-		"name": "Java", 
-		"description": "Java is a general-purpose, concurrent, class-based, object-oriented language that is specifically designed to have as few implementation dependencies as possible.",
-		"level": 3,
-		"love": false
-	}, { 
-		"name": "Python", 
-		"description": "Python is a general-purpose, high-level programming language whose design philosophy emphasizes code readability.",
-		"level": 3,
-		"love": true
-	}, 	{ 
-		"name": "JavaScript", 
-		"description": "The language of the web.",
+			"name": "Java", 
+			"description": "Since Java is used in ",
+			"level": 3,
+			"love": false
+	}, 
+	{ 
+			"name": "Python", 
+			"description": "Python is a general-purpose, high-level programming language whose design philosophy emphasizes code readability (Wikipedia). I often use Python in conjunction with frameworks like Django but a large number of my projects are written in plain Python. Twisted",
+			"level": 3,
+			"love": true
+	}, 	
+	{
+			"name": "JavaScript", 
+			"description": "The JavaScript code on this website jQuery, Backbone.js, underscore.js ",
+			"level": 2,
+			"love": true
+	},
+	{
+			"name": "Unix Shell", 
+			"description": "Unix shells like BASH, ASH, etc. make up a significant part of my life.",
+			"level":  3,
+			"love":  false
+	},
+	{
+			"name": "R (Statistics)", 
+			"description": "R is the name of a statistics software as well as an aspect oriented language.",
+			"level":  2,
+			"love":  false
+	},
+	{
+			"name": "xHTML/CSS", 
+			"description": "HTML, the basic presentation layer of the web. I also use CSS frameworks like Twitter's Bootstrap and blueprint-css.",
+			"level":  3,
+			"love":  true
+	},
+	{
+			"name": "Matlab/Octave", 
+			"description": "I used Matlab (and its open-source alternative Octave) extensively in lectures on numerics and simulations.",
+			"level":  3,
+			"love":  false
+	},
+	{
+			"name": "Perl", 
+			"description": "Perl is a language I used mainly for writing early web applications and data preprocessing.",
+			"level":  2,
+			"love":  false
+	},
+	{
+			"name": "PHP", 
+			"description": "Silverstripe-CMS, Wordpress",
+			"level":  2,
+			"love":  false
+	},
+	{
+			"name": "GPGPU computing with CUDA", 
+			"description": "General-Purpose Graphics Processing Unit (GPGPU) computing uses commodity grapics cards for high-performance computing.",
+			"level":  3,
+			"love":  false
+	},
+	{
+			"name": "Unix: Mac OS X, BSD, and Linux", 
+			"description": "Unix is my favourite kind of operating system.",
+			"level":  3,
+			"love":  true
+	},
+	{
+		"name": "C",
+		"description": "The C programming language: Arduino",
 		"level": 2,
 		"love": true
 	}

@@ -1,3 +1,27 @@
 #load_message {
 	text-align: center;
 }
+
+#skills_list {
+	border-top: 1px solid #ccc;
+}
+.skill {
+	border-bottom: 1px solid #ccc;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+div.skill:hover {
+	background-color: #F5F5F5;
+}
+
+.skill_name {
+	
+}
+
+.skill_level {
+	text-align: right;
+}
+
+#load_message {
+	margin-top:100px;
+}

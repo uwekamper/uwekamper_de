@@ -1,13 +1,15 @@
-{% extends "_staticpage.html" %}
-
-{%hyde
-    title: "Skills"
-%}
+---
+extends: base.j2
+default_block: main
+title: About BASIC
+description: The default hyde template
+---
 
 {% block extra_js %}
 <script src="{{site.url}}/media/js/skills.js"></script>
 <script>        
 $(document).ready(function () {
+	
 	var main_view = new SkillListView();
 	
 });     
@@ -18,6 +20,7 @@ $(document).ready(function () {
 <div class="row" id="skills_container">
   <div class="span8">
 	<div id="skills_list">
+		
 		<div id="load_message">
 			Loading …<br />
 			<div class="progress progress-striped active">
@@ -29,11 +32,9 @@ $(document).ready(function () {
   <div class="span4">
 	<div class="well">
 	<form>
-		
 		<div class="input-prepend">
-			<span class="add-on"><i class="icon-search"></i></span><input type="text" class="input-medium search-query" placeholder="Search skills…" id="skills_search">
+			<span class="add-on"><i class="icon-search"></i></span><input type="text" class="input-medium search-query" placeholder="Search skills…" id="skills_search" />
 		</div>
-	  
 	</form>
 	<h3>Skill Levels</h3>
 	<dl class="dl-horizontal">
@@ -51,51 +52,17 @@ $(document).ready(function () {
 </div>
 
 <!-- Templates -->
-<!-- Template for one entry in the -->
 <script type="text/template" id="skill_template">
-	<il>
-		<span class="skill_name"><%= name %></span>, <%= description %>,
+<div class="row">
+    <div class="span4 skill_name"><h3><%= name %></h3></div>
+    <div class="span4 skill_level">
 		<% for(var i = 0; i < level; i++) { %><i class="icon-star"></i><% } %>
 		<% if(love) { %><i class="icon-heart"></i><% } %>
-	</li>
-</script>
-<script type="text/template" id="skill_template2">
-<tr>
-	<td><%= skill.name %></td>
-	<td><%= skill.description %> <a href="#">more</a></td>
-	<td>
-		<% for(var i = 0; i < skill.level; i++) { %><i class="icon-star"></i><% } %>
-		<% if(skill.love) { %><i class="icon-heart"></i><% } %>
-	</td>
-</tr>
-</script>
-
-<script type="text/template" id="skillapp_template">
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Description</th>
-			<th>Skill&nbsp;Level</th>
-		</tr>
-	</thead>
-	<tbody>
-	<% _.each(skills, function(skill) { %> 
-		<tr>
-			<td><%= skill.name %></td>
-			<td><%= skill.description %> <a href="#">more</a></td>
-			<td>
-				<% for(var i = 0; i < skill.level; i++) { %><i class="icon-star"></i><% } %>
-				<% if(skill.love) { %><i class="icon-heart"></i><% } %>
-			</td>
-		</tr>
-	<% }); %>
-	</tbody>
-</table>
-</script>
-
-<script type="text/template" id="search_template">
-	<ul><li>Brumpf!</li></ul>
+	</div>
+</div>
+<div class="row">
+	<div class="span8 skill_description"><%= description %></div>
+</div>
 </script>
 
 {% endblock %}

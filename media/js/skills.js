@@ -9,31 +9,27 @@ var Skill = Backbone.Model.extend({
 
 var SkillList = Backbone.Collection.extend({
 	model: Skill,
+	
 	url: '/skills/skills.json',
 
-	search : function(letters){
+	search : function(letters) {
 		if(letters == "") return this;
-
-		var pattern = new RegExp(letters,"gi");
-		return _(this.filter(function(data) {
-		  	return pattern.test(data.get("name"));
-		}));
+	
+		var pattern = new RegExp(letters,"i");
+		
+		return new SkillList(this.filter(
+			function(data) {
+				return pattern.test(data.get("name"));
+			}
+		));
 	}
 });
 
 var Skills = new SkillList();
 
-// var SkillsAppModel = Backbone.Model.extend({
-// 	initialize: function() {
-// 		this.skills = new Skillset();
-// 	},
-// 	fetch: function(args) {
-// 		this.skills.fetch(args);
-// 	}
-// });
-
 var SkillView = Backbone.View.extend({
-	tagName: "li",
+	tagName: "div",
+	className: "skill",
 	
 	template: _.template( $("#skill_template").html() ),
 	
@@ -53,18 +49,30 @@ var SkillView = Backbone.View.extend({
 	handleNameClick: function() {
 		alert("Name clicked!");
 	}
-	
 });
 
 var SkillListView = Backbone.View.extend({
-	el: $("skills_list"),
+	el: $("#skills_container"),
+	
+	events: {
+		"keyup #skills_search": "search"
+	},
 	
 	initialize: function() {
 		Skills.bind('add', this.addOne, this);
 		Skills.bind('reset', this.addAll, this);
 		Skills.bind('all', this.render, this);
 		
-		Skills.fetch();
+		Skills.fetch( {success: function() {$("#load_message").remove();}} );
+	},
+
+	search: function(e) {
+		var letters = $("#skills_search").val();
+		this.$("#skills_list").empty();
+		Skills.search(letters).each(this.addOne);
+	},
+	
+	removeLoadMessage: function() {
 		
 	},
 	
@@ -77,34 +85,5 @@ var SkillListView = Backbone.View.extend({
 		Skills.each(this.addOne);
 	},
 	
-	render: function() {
-		
-	},
-	
-	search: function(e) {
-		var searchterm = $("#searchTask").val();
-		this.renderList(this.collection.search(searchterm));
-	}
 });
 
-// var SkillsAppController = {
-// 	init: function(spec){
-// 		// default values for the configuration
-// 		this.config = {
-// 			connect: true
-// 		};
-// 		
-// 		_.extend(this.config, spec);
-// 		
-// 		this.model = new Skillset();
-// 		this.view = new SkillListView({model: this.model});
-// 		
-// 		return this;
-// 	},
-// 	run: function() {
-// 		this.model.fetch( {success: function() {this.view.render();}} );
-// 	}
-// }
-//var search_view = new SkillsContainerView({ el: $("#skills_container"), collection:mySkillset });
-
-// mySkillset.fetch( {success: function() {search_view.render();} } );
