@@ -1,22 +1,6 @@
----
-extends: base.j2
-default_block: main
-title: About BASIC
-description: The default hyde template
----
+{% extends "base.j2" %}
 
-{% block extra_js %}
-<script src="{{site.url}}/media/js/skills.js"></script>
-<script>        
-$(document).ready(function () {
-	
-	var main_view = new SkillListView();
-	
-});     
-</script>
-{% endblock %}
-
-{% block article %}
+{% block main %}
 <div class="row" id="skills_container">
   <div class="span8">
 	<div id="skills_list">
@@ -51,6 +35,15 @@ $(document).ready(function () {
   </div>
 </div>
 
+
+{% endblock %}
+
+{% block extrajs %}
+<script src="{{site.url}}/media/js/underscore.js"></script>
+<script src="{{site.url}}/media/js/backbone.js"></script>
+{% endblock %}
+
+{% block scripts %}
 <!-- Templates -->
 <script type="text/template" id="skill_template">
 <div class="row">
@@ -65,4 +58,15 @@ $(document).ready(function () {
 </div>
 </script>
 
+<script src="{{site.url}}/media/js/skills.js"></script>
+<script>        
+$(document).ready(function () {
+	
+	var main_view = new SkillListView();
+	
+});     
+</script>
+
 {% endblock %}
+
+

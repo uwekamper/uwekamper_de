@@ -19,12 +19,24 @@ context:
                 css_class: home
                 type: page
                 url: index.html
-            # -
-            #     name: Blog
-            #     description: Blog
-            #     css_class: blog
-            #     type: node
-            #     url: blog
+            -
+                name: Blog
+                description: Blog
+                css_class: blog
+                type: node
+                url: blog
+            -
+                name: CV
+                description: Curriculum Vitae
+                css_class: skills
+                type: page
+                url: cv.html
+            -
+                name: Skills
+                description: Skills
+                css_class: skills
+                type: node
+                url: skills
             # -
             #     name: About
             #     description: About
@@ -43,13 +55,13 @@ sorter:
         filters:
             source.kind: html
             meta.listable: true
-# tagger:
-#     sorter: time
-#     archives:
-#         blog:
-#             source: blog
-#             target: blog/tags
-#             template: tagged_posts.j2
-#             archive_extension: html
-#             meta:
-#                 listable: false
+tagger:
+    sorter: time
+    archives:
+        blog:
+            source: blog
+            target: blog/tags
+            template: tagged_posts.j2
+            archive_extension: html
+            meta:
+                listable: false

@@ -12,8 +12,11 @@
 
 {% macro render_nav(menu, cls=None) -%}
 {% if menu -%}
-<nav {{'class='~cls if cls }}>
-    <ul>
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="brand" href="/?refresh">Uwe Kamper</a>
+	    <ul class="nav">
         {% for item in menu -%}
         {% set active = False -%}
         {% if item.type == 'page' -%}
@@ -34,7 +37,9 @@
             </a>
         </li>
         {%- endfor %}
-    </ul>
-</nav>
+	    </ul>
+		</div><!-- /container -->
+	</div><!-- /navbar-inner -->
+</div>
 {%- endif %}
 {%- endmacro %}

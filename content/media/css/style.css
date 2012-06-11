@@ -1,0 +1,106 @@
+#load_message {
+	text-align: center;
+}
+
+#skills_list {
+	border-top: 1px solid #ccc;
+}
+.skill {
+	border-bottom: 1px solid #ccc;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+div.skill:hover {
+	background-color: #F5F5F5;
+}
+
+.skill_name {
+	
+}
+
+.skill_level {
+	text-align: right;
+}
+
+#load_message {
+	margin-top:100px;
+}
+
+/* CV styles */
+.cv_header {
+
+}
+
+.cv_year {
+	height: 240px;
+}
+
+.cv_fade {
+	color: #666;
+	height: 60px;
+	background: #FFF url('/media/img/scale_fade.png') no-repeat;
+}
+.cv_scale {
+	color: #666;
+	height: 240px;
+	background: #FFF url('/media/img/scale.png') no-repeat;
+}
+
+.cv_scale h2 {
+	margin-left: 80px;
+	font-weight: normal;
+}
+
+.cv_education {
+	background-color: #ddd;
+}
+.cv_education_icon {
+	background: #DDD url('/media/img/gradhat.png') no-repeat right top;
+}
+.cv_education h4 {
+	padding: 5px 0 0 5px;
+}
+.cv_education p {
+	padding-left: 5px;
+}
+
+.cv_professional {
+	background-color: yellow;
+}
+.cv_professional_icon {
+	background: yellow url('/media/img/necktie.png') no-repeat right top;
+}
+.cv_professional h4 {
+	padding: 5px 0 0 5px;
+}
+.cv_professional p {
+	padding-left: 5px;
+}
+
+.cv_personal {
+	background-color: #87B43F;
+}
+.cv_personal {
+	background: #87B43F url('/media/img/personal.png') no-repeat right top;
+}
+.cv_personal h4 {
+	padding: 5px 0 0 5px;
+}
+.cv_personal p {
+	padding-left: 5px;
+}
+
+
+.cv_birth {
+	background-color: #9CCDF0;
+}
+.cv_birth_icon {
+	background-color: yellow;
+	background: #9CCDF0 url('/media/img/baby.png') no-repeat right top;
+}
+.cv_birth h4 {
+	padding: 5px 0 0 5px;
+}
+.cv_birth p {
+	padding-left: 5px;
+}
