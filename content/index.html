@@ -1,20 +1,34 @@
 ---
 extends: base.j2
-default_block: main
-title: About BASIC
+default_block: container
+title: Uwe Kamper
 description: The default hyde template
 ---
 
-<div class="hero-unit">
-  <h1>Software Developer and Geek-for-Hire</h1>
-  <address>
-	<strong>Uwe Kamper</strong><br />
-	Leberstr. 56<br />
-	D-10829 Berlin, Germany
-  </address>
-	<p>
-    <a class="btn btn-primary btn-large">
-      Hire me now!
-    </a>
-  </p>
+<div class="row">
+	<div class="span4" >
+		<!-- <blockquote class="pull-right" id="talkingheads">
+				  <p>Never for money, always for love</p>
+				  <small>Talking Heads</small>
+				</blockquote> -->
+		<img id="portrait" src="{{ media_url('img/portrait.jpg') }}" width="290px"/>
+	</div>
+	<div class="span8" style="height: 438px;">
+		<hi class="tagline">Hello, my name is Uwe&nbsp;Kamper and I will gladly take your money.</h1>
+	</div> 
+</div>
+<div class="row">
+	<div class="span12">
+		<p class="frontpage">In return I'll build breath-taking applications for you using technologies like
+			<em>Python</em>, <em>Java</em>, <em>C++</em>, <em>Javascript</em>, and many more.
+			Here is a <a href="./skills/">full list of my skills</a>.</p>
+		<p class="frontpage">I studied <em>Bioinformatics</em> at 
+			Freie Universität, Berlin where learned how to solve complex problems using methods from
+			<em>statistics</em>, <em>machine learning</em>, <em>sequence analysis</em>, and computational biology. 
+			I also helped start and <em>launch a company</em> back in 2003 that still exists today. 
+			To learn more about my life, have a look at my <a href="./cv.html"><i>Curriculum&nbsp;vitae</i></a>.</p>
+		<p class="frontpage">I am based in Berlin, Germany</p>
+		<p class="frontpage">Are you are looking for a <em>freelance software developer</em> that is smart and gets things done? 
+			Then you should <a href="./contact.html">contact me now</a>!</p>
+	</div>
 </div>

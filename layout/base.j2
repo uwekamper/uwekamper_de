@@ -27,7 +27,7 @@
 
   <!--  Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="{{ resource.meta.viewport }}">
-
+  
   {% block favicons %}
   <!-- Place favicon.ico & apple-touch-icon.png
         in the root of your domain and delete these references -->
@@ -36,6 +36,7 @@
   {% endblock favicons %}
 
   {% block css %}
+	<link rel="stylesheet" href="{{ media_url('bootstrap/css/bootstrap.css') }}">
 	<style type="text/css">
 		body {
 			padding-top: 60px;
@@ -43,7 +44,6 @@
 		}
 	</style>
   <!-- CSS goes here -->
-  <link rel="stylesheet" href="{{ media_url('bootstrap/css/bootstrap.css') }}">
 	<link rel="stylesheet" href="{{ media_url('css/style.css') }}">
   {% endblock css %}
 
@@ -75,11 +75,13 @@
           {% endblock main %}
       </div><!-- /main -->
 	  </div><!-- /.row -->
-  	<hr>  
-		<footer>
-			Powered by <a href="http://ringce.com/hyde">hyde</a>.
-		</footer>
+  	
+		
 	{% endblock container %}
+	<hr />  
+	<footer>
+		Powered by <a href="http://ringce.com/hyde">hyde</a>.
+	</footer>
   </div> <!-- /.container -->
   
   {% endblock content%}
@@ -87,7 +89,7 @@
   <!-- Javascript at the bottom for fast page loading -->
   {% block jquery %}
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
 	{% block extrajs %}
 	{% endblock extrajs %}
   {% endblock jquery %}

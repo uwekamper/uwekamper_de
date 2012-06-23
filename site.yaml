@@ -37,6 +37,12 @@ context:
                 css_class: skills
                 type: node
                 url: skills
+            -
+                name: Contact
+                description: Contace
+                css_class: contact
+                type: node
+                url: contact.html
             # -
             #     name: About
             #     description: About
@@ -47,6 +53,7 @@ meta:
     nodemeta: meta.yaml
     created: !!timestamp 2010-01-01 00:00:00
     author: Uwe Kamper
+    charset: utf-8
 sorter:
     time:
         attr:
@@ -65,3 +72,7 @@ tagger:
             archive_extension: html
             meta:
                 listable: false
+publisher:
+    uwekamper:
+        type: hyde.ext.publishers.pyfs.PyFS
+        url: sftp://uk@uwekamper.de//home/uk/uwekamper.de/htdocs/beta/

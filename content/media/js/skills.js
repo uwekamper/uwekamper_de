@@ -10,7 +10,7 @@ var Skill = Backbone.Model.extend({
 var SkillList = Backbone.Collection.extend({
 	model: Skill,
 	
-	url: '/skills/skills.json',
+	url: 'skills.json',
 
 	search : function(letters) {
 		if(letters == "") return this;

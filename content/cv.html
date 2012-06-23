@@ -1,122 +1,203 @@
 {% extends "base.j2" %}
 
-{% block container %}
-<div class="row cv_header">
-	<div class="span3 cv_fade">&nbsp;</div>
-	<div class="span3"><h2>Professional</h2></div>
-	<div class="span3"><h2>Education</h2></div>
-	<div class="span3"><h2>Personal</h2></div>
-</div>
-<div class="row cv_year">
-	<div class="span3 cv_scale" ><h2>2012</h2></div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">
-		<div class="cv_education cv_education_icon" style="margin-top: 120px; height: 120px;"><h4>Master of Science in Bioinformatics</h4>
-		<p><em>Freie Universität Berlin</em></p>
+{% block content %}
+	
+<div class="container">
+<h1>Curriculum Vitae</h1>
+<ul class="nav nav-tabs" id="myTab">
+  <li><a href="#timeline" data-toggle="tab">Timeline</a></li>
+  <li><a href="#classic" data-toggle="tab">Classic</a></li>
+</ul>
+<div id="myTabContent" class="tab-content">
+	<div class="tab-pane fade" id="timeline">
+		<div id="cv_key" class="well">
+			<h3>Color Key</h3>
+			<div style="background-color: #DFF0D8; height:30px;"><img src="{{ media_url('img/gradhat.png') }}" /> Education</div>
+			<div style="background-color: #FCF8E3; height:30px;"><img src="{{ media_url('img/necktie.png') }}" /> Professional</div>
+			<div style="background-color: #87B43F; height:30px;"><img src="{{ media_url('img/personal.png') }}" /> Personal</div>
+			<div style="background-color: #9CCDF0; height:30px;"><img src="{{ media_url('img/baby.png') }}" /> Birth</div>
+		</div>
+	<div class="row">
+		<div class="span12 cv_fade">&nbsp;</div>
+	</div>
+	<div class="row cv_year">
+		<div class="span3 cv_scale" >
+			<h2 class="cv_year_number">2012</h2>
+			<h2 class="cv_year_number">2011</h2>
+			<h2 class="cv_year_number">2010</h2>
+			<h2 class="cv_year_number">2009</h2>
+			<h2 class="cv_year_number">2008</h2>
+			<h2 class="cv_year_number">2007</h2>
+			<h2 class="cv_year_number">2006</h2>
+			<h2 class="cv_year_number">2005</h2>
+			<h2 class="cv_year_number">2004</h2>
+			<h2 class="cv_year_number">2003</h2>
+			<h2 class="cv_year_number">2002</h2>
+			<h2 class="cv_year_number">2001</h2>
+			<h2 class="cv_year_number">2000</h2>
+		</div>
+		<div class="span3">
+			<div class="cv_spacer" style="height: 305px;">&nbsp;</div>
+			<div class="cv_item cv_professional" style="height: 161px;"><h4>Scopis GmbH</h4></div>
+			<div class="cv_spacer" style="height: 42px;">&nbsp;</div>
+			<div class="cv_item cv_professional" style="height: 142px;"><h4>Siemens Corporate<br />Reasearch, Inc.</h4>
+				<p><em>Princeton, NJ, USA</em></p></div>
+			<div class="cv_spacer" style="height: 406px;">&nbsp;</div>
+			<div class="cv_item cv_professional" style="height: 121px;"><h4>Charite</h4></div>
+			<div class="cv_spacer" style="height: 691px;">&nbsp;</div>
+			<div class="cv_item cv_professional" style="height: 181px;"><h4>Rotes Kreuz Krankenhaus Kassel</h4></div>
+		</div>
+		<div class="span3">
+			<div class="cv_spacer" style="height: 163px;">&nbsp;</div>
+			<div class="cv_item cv_education" style="height: 872px;"><h4>Master of Science in Bioinformatics</h4></div>
+			<div class="cv_spacer" style="height: 20px;">&nbsp;</div>
+			<div class="cv_item cv_education" style="height: 711px;"><h4>Bachelor of Science in Bioinformatics</h4></div>
+			<div class="cv_spacer" style="height: 305px;">&nbsp;</div>
+			<div class="cv_item cv_education" style="height: 223px;"><h4>MaTA</h4></div>
+			<div class="cv_spacer" style="height: 21px;">&nbsp;</div>
+			<div class="cv_item cv_education" style="height: 709px;"><h4>Abitur</h4></div>
+		</div>
+		<div class="span3">
+			<div class="cv_item cv_professional" style="height: 2678px;"><h4>ITfM GmbH</h4></div>
 		</div>
 	</div>
-	<div class="span3">&nbsp;</div>
-</div>
-<div class="row cv_year">
-	<div class="span3 cv_scale" ><h2>2011</h2></div>
-	<div class="span3"><div class="cv_professional cv_professional_icon" style="margin-top: 60px; height: 160px;"><h4>Scopis GmbH</h4>
-	<p><em>Master Student</em></p></div></div>
-	<div class="span3">
-		<div class="cv_education" style="margin-top: 0px; height: 240px;">&nbsp;</div>
-	</div>
-	<div class="span3">&nbsp;</div>
-</div>
-<div class="row cv_year">
-	<div class="span3 cv_scale" ><h2>2010</h2></div>
-	<div class="span3">
-		<div class="cv_professional cv_professional_icon" style="margin-top: 40px; height: 120px;"><h4>Siemens Corporate Research</h4>
-		<p><em>Research Intern</em></p></div>
-	</div>
-	<div class="span3">
-		<div class="cv_education" style="margin-top: 0px; height: 240px;">&nbsp;</div>
-	</div>
-	<div class="span3">&nbsp;</div>
-</div>
-<div class="row cv_year">
-	<div class="span3 cv_scale" ><h2>2009</h2></div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">
-		<div class="cv_education" style="margin-top: 0px; height: 240px;">&nbsp;</div>
-	</div>
-	<div class="span3">&nbsp;</div>
-</div>
-<div class="row cv_year">
-	<div class="span3 cv_scale" ><h2>2008</h2></div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-</div>
-<div class="row cv_year">
-	<div class="span3 cv_scale" ><h2>2008</h2></div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-</div>
-<div class="row cv_year">
-	<div class="span3 cv_scale" ><h2>2008</h2></div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-</div>
-<div class="row cv_year">
-	<div class="span3 cv_scale" ><h2>2008</h2></div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-</div>
-<div class="row cv_year">
-	<div class="span3 cv_scale" ><h2>2008</h2></div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-</div>
-<div class="row cv_year">
-	<div class="span3 cv_scale" ><h2>2008</h2></div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-</div>
-<div class="row cv_year">
-	<div class="span3 cv_scale" ><h2>2008</h2></div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-</div>
-<div class="row cv_year">
-	<div class="span3 cv_scale" ><h2>2008</h2></div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-</div>
-<div class="row cv_year">
-	<div class="span3 cv_scale" ><h2>2008</h2></div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-</div>
-<div class="row cv_year">
-	<div class="span3 cv_scale" ><h2>2008</h2></div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-</div>
-<div class="row cv_year">
-	<div class="span3 cv_scale" ><h2>2008</h2></div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3">&nbsp;</div>
-</div>
-<div class="row cv_year">
-	<div class="span3 cv_scale" ><h2>1983</h2></div>
-	<div class="span3">&nbsp;</div>
-	<div class="span3"><div class="cv_birth cv_birth_icon" style="margin-top: 60px; height: 60px;"><h4>Birth</h4>
-	<p><em>13 October 1983, Osnabrueck, Germany</em></p></div></div>
-	<div class="span3">&nbsp;</div>
-</div>
+	</div><!-- /container timeline -->
+	<div class="tab-pane fade" id="classic">
+		<h3><img src="{{ media_url('img/gradhat.png') }}" /> Education</h3>
+		<table class="table">
+			<tbody>
+				<tr>
+					<td>October, 2009 till now</td>
+					<td><h4>Master of Science in Bioinformatics</h4>
+					<p><em>Freie Universität Berlin</em></p>
+					<p>Curriculum (excerpt):
+					<ul>
+						<li>medical imaging</li>
+						<li>systems biology: reverse engineering and simulation of
+					biological systems, inferring models from biological data.</li>
+						<li>physiology and pathophysiology</li>
+						<li>didactics</li>
+					</ul>
+					Projected date of completion: Spring/Summer, 2012</p></td>
+				</tr>
+				<tr>
+					<td>October, 2005 till September, 2008</td>
+					<td><h4>Bachelor of Science in Bioinformatics</h4>
+					<p><em>Freie Universität Berlin</em></p>
+					<p>Curriculum (excerpt):
+					<ul>
+						<li>molecular biology, neurobiology, (bio-)chemistry</li>
+						<li>mathematics and statistics</li>
+						<li>pattern recognition, biological sequence analysis, artificial	intelligence</li>
+					</ul>
+					Bachelor's thesis on the 3D visualisation and simulation of bio-molecules within the 
+					3D world &quot;Project Wonderland&quot;
+					(thesis is available <a href="http://publications.mi.fu-berlin.de/154/1/bathesis_kamper.pdf">here</a>).</p></td>
+				</tr>
+				<tr>
+					<td>August, 2003 till July, 2004</td>
+					<td>
+						<h4>Apprenticeship for assistant for mathematics and information technology</h4>
+						<p><em>Georg-Christoph-Lichtenberg-Schule, Kassel</em></p>
+						<p>Curriculum (excerpt):
+						<ul>
+							<li>numerical mathematics</li>
+							<li>object-oriented programming (C/C++), databases</li>
+							<li>digital electronics</li>
+							<li>economics</li>
+						<ul></p>
+					</td>
+				</tr>
+				<tr>
+					<td>August, 2000 till July, 2003</td>
+					<td>
+						<h4>General qualification for university entrance (&quot;Abitur&quot;)</h4>
+						<p><em>Georg-Christoph-Lichtenberg-Schule, Kassel</em></p>
+						<p>Major courses: English and computer science</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<h3><img src="{{ media_url('img/necktie.png') }}" /> Professional Experience</h3>
+		<table class="table">
+			<tbody>
+				<tr>
+					<td>February, 2011 till September, 2011</td>
+					<td><h4><a href="http://www.scopis.com/">Scopis GmbH, Berlin, Germany</a></h4>
+					<p><em>Master Student</em></p>
+					<p>Key aspects:
+					<ul>
+						<li>computer vision, 3D visualization, medical applications</li>
+						<li>developing an optical registration system for a clinical applications (ENT endoscopy) (mostly) in C++</li>
+						<li>writing my master's thesis about the whole process.</li></p></ul></td>
+				</tr>
+				<tr>
+					<td>May, 2010 till November, 2010</td>
+					<td><h4>Siemens Corporate Research Inc., Princeton, NJ, USA</h4>
+					<p><em>Research Intern</em></p>
+					<p>Key aspects:
+					<ul>
+						<li>practical research in statistical analysis, text-analysis, text- 
+							and data mining (clustering and classification), and machine learning</li>
+						<li>development of Rich Internet Applications (RIA) in Adobe Flex and Java.</li>
+					</ul></p></td>
+				</tr>
+				<tr>
+					<td>March, 2008 till August, 2008</td>
+					<td><h4>Charité, Institute of Biometry and Clinical Epidemology, Berlin</h4>
+					<p><em>Intern and Research Assistant</em></p>
+					<p>Key aspects:
+					<ul>
+						<li>statistical analysis of medical experiments in R</li>
+						<li>organisation and lecturing of a seminar accompanying the
+						lecture on &quot;Multivariate Statistics&quot; at the Freie Universität Berlin.</li>
+					</ul></p></td>
+				</tr>
+				<tr>
+					<td>August 2004 till April 2005</td>
+					<td><h4>Red Cross Hospital — Kassel, Hesse, Germany</h4>
+					<p><em>Civilian service in the IT department</em></p>
+					<p>Key aspects:
+					<ul>
+						<li>1st level support for employees and patients</li>
+						<li>maintenance of networks, servers, and desktop PCs</li>
+						<li>system administration under Windows, Linux, and SCO Unix</li>
+					</ul></p></td>
+				</tr>
+				<tr>
+					<td>2002 till now</td>
+					<td><h4><a href="http://www.itfm.de/">Informations-Technologie für Menschen (ITfM) GmbH</a></h4>
+					<p><em>Free-lance Collaborator</em></p>
+					<p>Key aspects:
+					<ul>
+						<li>bringing fast internet to rural areas that did not have
+						broadband access before</li>
+						<li>IP routing and load-balancing with Linux</li>
+						<li>traffic shaping and traffic management</li>
+						<li>developing a web-interface for linux-based embedded	devices</li>
+						<li>network management</li>
+						<li>technical support for end users and co-workers</li>
+						<li>constructing of directional radio links, installation and construction of antennas and antenna towers</li>
+						<li>representing the company at trade fairs in the U.S. and	Germany</li>
+					</ul></p></td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</div><!-- /container classic-->
+</div><!-- /myTabContent -->
+</div><!-- /container -->
+{% endblock %}
 
+{% block extrajs %}
+<script src="{{media_url('js/bootstrap-tab.js') }}"></script>
+<script>        
+$(document).ready(function () {
+	$('#myTab a').click(function (e) {
+	  e.preventDefault();
+	  $(this).tab('show');
+	})
+	$('#myTab a[href="#timeline"]').tab('show'); 
+});     
+</script>
 {% endblock %}
