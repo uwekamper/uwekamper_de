@@ -5,6 +5,12 @@
 #skills_list {
 	border-top: 1px solid #ccc;
 }
+#skills_search_addon {
+	margin-left: 0px;
+}
+#skills_search {
+	width: 183px;
+}
 .skill {
 	border-bottom: 1px solid #ccc;
 	padding-top: 10px;
@@ -14,8 +20,15 @@ div.skill:hover {
 	background-color: #F5F5F5;
 }
 
-.skill_name {
-	
+.skill_name h3 a {
+	text-decoration: underline;
+	color: #FA023C;
+}
+
+.skill_name h3 a:hover {
+	text-decoration: underline;
+	color: #fff;
+	background-color: #FA023C;
 }
 
 .skill_level {
@@ -101,7 +114,7 @@ div.skill:hover {
 #cv_key {
   	position: fixed;
 	right: 20px;
-	top: 20%;
+	top: 280px;
 	width: 9em;
 	margin-top: -2.5em;
 }
@@ -110,7 +123,7 @@ div.skill:hover {
 }
 
 #talkingheads {
-	margin-top: 40px;
+	margin-top: 20px;
 }
 
 .tagline {
@@ -154,4 +167,139 @@ div.skill:hover {
 #portrait {
 	margin: 0 10px 0 0;
 	float: left;
+}
+
+#main_nav {
+	margin: 0 0 3em 0;
+	padding: 0;
+	list-style: none;
+	float: right;
+	font-size: 18px;
+	margin: 58px 0 0 0;
+}
+
+#main_nav li {
+	float: left; 
+	padding: 0 0 0 5px;
+}
+
+#main_nav li a {
+	padding: 0 15px 0 15px;
+	color: #333;
+	font-weight: normal;
+}
+
+#main_nav li a span.inner_nav_link {
+	padding-bottom: 20px;
+	border-bottom: solid 2px none;
+}
+
+#main_nav li a:hover {
+	text-decoration: none;
+	background-color: #fff;
+	color: #aaa;
+}
+#main_nav li a:hover span.inner_nav_link {
+	border-bottom: solid 2px #aaa;
+}
+
+#main_nav li a:hover span.inner_nav_link {
+	text-decoration: none;
+	background-color: #fff;
+	color: #aaa;
+	border-bottom: solid 2px #aaa;
+}
+
+#main_nav li a.active {
+	text-decoration: none;
+	background-color: #fff;
+	color: #333;
+}
+#main_nav li a.active span.inner_nav_link {
+	border-bottom: solid 2px #333;
+}
+
+#logo {
+	margin-left: 4px;
+}
+
+.shadow {
+	border-top: 1px solid #ddd;
+	margin-top:1px;
+	height: 40px;
+}
+
+#footer {
+	text-shadow: black 1px 1px 0px;
+	padding-top: 20px;
+	margin-top:50px;
+	color: #e0e0e0;
+	background: #fff url('../img/shadow.png') repeat-x;
+	width: 100%;
+	background-color: #333; /*#282E30;*/
+	min-height: 240px;
+}
+#footer strong {
+	color: #fff;
+}
+
+#footer a {
+	color: #fff;
+	font-weight: bold;
+}
+
+#footer a:hover {
+	color: #FA023C;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#footer h3 {
+	margin-bottom: 10px;
+}
+
+#copyright {
+	text-align: center;
+	margin: 20px 0 0 0;
+	padding: 20px 0 0 0;
+	border-top: dashed 1px #e0e0e0;
+}
+
+#marker {
+	margin-right: 2px;
+}
+
+.text-icon {
+	vertical-align: -9px;
+	margin-right: 8px;
+}
+
+.required {
+	color: #FE3348;
+	font-size: 30px;
+	margin-left: 5px;
+}
+
+.blogdate {
+	margin-bottom: 10px;
+}
+.blogtitle a {
+	color: #FA023C;
+	text-decoration: underline;
+}
+.blogtitle a:hover {
+	color: #fff;
+	background-color: #FA023C;
+	text-decoration: underline;
+}
+
+#author {
+	margin-top: 65px;
+	min-height: 160px;
+}
+#author img {
+	margin: 8px 0 5px 0;
+}
+h1.start_page {
+	margin-bottom: 20px;
 }

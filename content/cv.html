@@ -1,9 +1,8 @@
 {% extends "base.j2" %}
 
-{% block content %}
-	
-<div class="container">
-<h1>Curriculum Vitae</h1>
+{% block container %}
+
+<h1 class="start_page">Curriculum Vitae</h1>
 <ul class="nav nav-tabs" id="myTab">
   <li><a href="#timeline" data-toggle="tab">Timeline</a></li>
   <li><a href="#classic" data-toggle="tab">Classic</a></li>
@@ -190,7 +189,7 @@
 {% endblock %}
 
 {% block extrajs %}
-<script src="{{media_url('js/bootstrap-tab.js') }}"></script>
+<script src="{{ media_url('bootstrap/js/bootstrap-tab.js') }}"></script>
 <script>        
 $(document).ready(function () {
 	$('#myTab a').click(function (e) {

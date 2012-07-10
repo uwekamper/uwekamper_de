@@ -1,74 +1,172 @@
 [
 	{ 
+			"id": "java",
 			"name": "Java", 
 			"description": "Since Java is used in ",
+			"long_description": "Lorem impsum dolor sit amet.",
+			"type": "lang",
+			"related": [],
 			"level": 3,
 			"love": false
 	}, 
 	{ 
+			"id": "python",
 			"name": "Python", 
 			"description": "Python is a general-purpose, high-level programming language whose design philosophy emphasizes code readability (Wikipedia). I often use Python in conjunction with frameworks like Django but a large number of my projects are written in plain Python. Twisted",
+			"long_description": "Lorem impsum dolor sit amet.",
+			"type": "lang",
 			"level": 3,
 			"love": true
 	}, 	
 	{
+			"id": "javascript",
 			"name": "JavaScript", 
 			"description": "The JavaScript code on this website jQuery, Backbone.js, underscore.js ",
+			"long_description": "Lorem impsum dolor sit amet.",
+			"type": "lang",
 			"level": 2,
 			"love": true
 	},
 	{
+			"id": "shell",
 			"name": "Unix Shell", 
-			"description": "Unix shells like BASH, ASH, etc. make up a significant part of my life.",
-			"level":  3,
-			"love":  false
+			"description": "Unix shells like BASH, ASH, etc. for automating administrative tasks.",
+			"long_description": "Using and programming shell scripts ",
+			"type": "lang",
+			"level": 3,
+			"love": false
 	},
 	{
+			"id": "r",
 			"name": "R (Statistics)", 
 			"description": "R is the name of a statistics software as well as an aspect oriented language.",
+			"long_description": "Lorem impsum dolor sit amet.",
+			"type": "lang",
+			"related": ["matlab"],
 			"level":  2,
 			"love":  false
 	},
 	{
-			"name": "xHTML/CSS", 
+			"id": "html",
+			"name": "HTML, CSS", 
 			"description": "HTML, the basic presentation layer of the web. I also use CSS frameworks like Twitter's Bootstrap and blueprint-css.",
-			"level":  3,
-			"love":  true
+			"long_description": "Lorem impsum dolor sit amet.",
+			"type": "lang",
+			"level": 3,
+			"love": true
 	},
 	{
+			"id": "bootstrap",
+			"name": "Twitter Bootstrap",
+			"description": "Twitter's Bootstrap, the CSS/HTML5/JS framework powers this site.",
+			"long_description": "Twitter's Bootstrap is the CSS/HTML5/JS framework that powers this site. Apart from that I have used Bootstrap on numerous projects, e.g. the website for the village Oberellenbach, <a href=\"http://oberellenbach.de/\" target=\"_blank\">http://oberellenbach.de/</a>",
+			"type": "framework",
+			"related": ["html"],
+			"level": 3,
+			"love": true
+	},
+	{
+			"id": "matlab",
 			"name": "Matlab/Octave", 
 			"description": "I used Matlab (and its open-source alternative Octave) extensively in lectures on numerics and simulations.",
-			"level":  3,
-			"love":  false
+			"long_description": "Lorem impsum dolor sit amet.",
+			"type": "lang",
+			"level": 3,
+			"love": false
 	},
 	{
+			"id": "silverstripe",
+			"name": "Silverstripe (Content Management System)",
+			"description": "Silverstripe",
+			"long_description": "Silverstripe long description",
+			"type": "app",
+			"related": ["php", "html"],
+			"level": 3,
+			"love": false
+	},
+	{
+			"id": "perl",
 			"name": "Perl", 
 			"description": "Perl is a language I used mainly for writing early web applications and data preprocessing.",
-			"level":  2,
-			"love":  false
+			"long_description": "Lorem impsum dolor sit amet.",
+			"type": "lang",
+			"level": 2,
+			"love": false
 	},
 	{
+			"id": "php",
 			"name": "PHP", 
 			"description": "Silverstripe-CMS, Wordpress",
-			"level":  2,
-			"love":  false
+			"long_description": "Lorem impsum dolor sit amet.",
+			"type": "lang",
+			"related": ["wordpress", "silverstripe"],
+			"level": 2,
+			"love": false
 	},
 	{
+			"id": "gpgpu",
 			"name": "GPGPU computing with CUDA", 
 			"description": "General-Purpose Graphics Processing Unit (GPGPU) computing uses commodity grapics cards for high-performance computing.",
+			"long_description": "Lorem impsum dolor sit amet.",
+			"type": "framework",
 			"level":  3,
 			"love":  false
 	},
 	{
+			"id": "unix",
 			"name": "Unix: Mac OS X, BSD, and Linux", 
 			"description": "Unix is my favourite kind of operating system.",
+			"long_description": "Lorem impsum dolor sit amet.",
+			"type": "os",
 			"level":  3,
 			"love":  true
 	},
 	{
-		"name": "C",
-		"description": "The C programming language: Arduino",
-		"level": 2,
-		"love": true
+			"id": "c",
+			"name": "C",
+			"description": "The lingua franca of Unix system programming.",
+			"long_description": "Lorem impsum dolor sit amet.",
+			"type": "lang",
+			"level": 2,
+			"love": true
+	},
+	{
+			"id": "cpp",
+			"name": "C++",
+			"description": "C++",
+			"long_description": "Lorem impsum dolor sit amet.",
+			"type": "lang",
+			"related": ["qt"],
+			"level": 2,
+			"love": true
+	},
+	{
+			"id": "qt",
+			"name": "Qt",
+			"description": "Nokia's Qt application framework.",
+			"long_description": "During my 6-month time at <a href=\"http://scopis.com/\" target=\"_blank\">Scopis</a> I managed to get in-depth experience with Qt developing GUI applications in C++.",
+			"type": "lang",
+			"related": ["cpp"],
+			"level": 2,
+			"love": true
+	},
+	{
+			"id": "wordpress",
+			"name": "Wordpress",
+			"description": "Wordpress, the blogging engine.",
+			"long_description": "Wordpress long description",
+			"type": "app",
+			"related": ["php"],
+			"level": 3,
+			"love": false
+	},
+	{
+			"id": "quark",
+			"name": "Quark Xpress",
+			"description": "bla",
+			"long_description": "blabla",
+			"type": "app",
+			"level": 1,
+			"love": false
 	}
 ]
