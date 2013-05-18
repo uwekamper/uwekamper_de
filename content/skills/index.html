@@ -55,6 +55,7 @@
 <script src="{{ media_url('bootstrap/js/bootstrap-modal.js') }}"></script>
 <script src="{{ media_url('js/underscore.js') }}"></script>
 <script src="{{ media_url('js/backbone.js') }}"></script>
+<script src="{{ media_url('js/showdown.js') }}"></script>
 {% endblock %}
 
 {% block scripts %}
@@ -78,7 +79,10 @@
     <h3><%= name %></h3>
   </div>
   <div class="modal-body">
-    <p><%= long_description %></p>
+    <p></p>
+		<% var converter = new Showdown.converter(); 
+		var rendered_long_description = converter.makeHtml(long_description);	%>
+		<%= rendered_long_description %>
 		<% if (related.length > 0) { %>
 			<p>Related skills:
 				<ul>

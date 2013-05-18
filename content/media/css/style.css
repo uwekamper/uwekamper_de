@@ -146,8 +146,11 @@ div.skill:hover {
 }
 
 .frontpage em {
+	text-decoration: underline;
+	font-weight: 500;
 	font-style: normal;
-	background-color: #C8FF00;
+/*	font-style: normal;*/
+/*	background-color: #C8FF00;*/
 }
 
 

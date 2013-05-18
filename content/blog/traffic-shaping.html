@@ -1,0 +1,91 @@
+---
+title: Make your hackerspace/conference network suck a little less with traffic shaping
+description: >
+    Smile. Laugh.
+created: !!timestamp '2013-04-09 10:00:00'
+tags:
+    - linux
+    - networking
+---
+
+{% mark image -%}
+{%- endmark %}
+
+
+Why Bandwidth Hogs Cause Problems
+---------------------------------
+
+{% mark excerpt -%}
+The problem is: Most cheap internet connections have asymmetric upload speeds. For example, one conference I attended had a cable line with 100 Mbit/s downstream bandwidth – but only 5 Mbit/s of upstream. As soon as someone starts using the network to upload data to the outside internet, the whole upstream channel is blocked. This is a big problem. You only need one person in the room who forgot to turn off a Bittorrent client to clog the whole network. Here is why:
+{%- endmark %}
+
+
+You might know that with TCP/IP every packet sent needs to be acknowledged. That means that when you do a download, for every large packet that the server sends to your client, your client must send a tiny little packet back to the server to tell the server that you received the data correctly. These little packets are called ACKs. When the upstream channel is congested, the little ACKs can't get through to the server in time and the server will think that your internet connection is maxed-out even when there is plenty of downstream bandwidth available. 
+
+To find out if you have this problem you can send a ping to the outside. When the upstream is clogged you will see ping response times that are much higher than usual. For example sending a ping to the IP address 4.2.2.2 usually takes about 25 ms using my DSL connection at home. When the upstream is clogged the pings will go up to 400 ms and more. You can also use "mtr" which combines ping and traceroute into one tool. http://www.bitwizard.nl/mtr/ 
+
+If you are alone on the your network this problem is easy to solve: Just turn off any applications that might upload data if you want a fast download. When other people are bringing their own devices and connecting them to your network you can 
+
+Curb the Bandwidth Hogs
+-----------------------
+
+Obviously you should try to get as much upstream bandwidth as you can. But ultimately that won't stop the bandwidth hogs from clogging your upstream. You need to make sure that the ACK packets always get through no matter how congested your upstream channel is. This is where traffic shaping comes into play. With traffic shaping, ACKs become like priority mail that are always sent faster than other packets.
+
+To do this we need a Linux router that connects to the local LAN on one side and to the internet on the other side.  You can use any machine with at least two separate NICs that runs Linux. Any cheap router that runs OpenWRT will do, too.
+
+We will divide the traffic into three different classes:
+
+1. real-time: This is everything that needs to be sent out as fast as possible. This means ACK-Packets and Packets belonging to interactive sessions like DNS, SSH, and Windows remote desktop. We will also add ping packets to this class because this will make our network look much better to users that test it with pings.
+2. fast traffic: This traffic class contains services that we want to be fast on our network but do not need to be real-time fast. This includes HTTP(S), E-Mail, 
+3. bulk traffic: Everything that is not classified will be in the bulk traffic class
+
+First we need to set up the three classes. You need to find out which interfaces is connected
+In this example I will use eth0 as the interface connected to the internet. You may need to change the value according to you network configuration.
+
+     #!/bin/bash
+     
+     tc qdisc del dev eth0 root
+     
+     tc qdisc add dev eth0 root handle 1: htb default 30
+     tc class add dev eth0 parent 1: classid 1:1 htb rate 4500kbit burst 15k
+
+     tc class add dev eth0 parent 1:1 classid 1:10 htb rate 3000kbit ceil 4000kbit prio 1 burst 15k
+     tc class add dev eth0 parent 1:1 classid 1:20 htb rate 1000kbit ceil 3000kbit prio 2 burst 1492
+     tc class add dev eth0 parent 1:1 classid 1:30 htb rate 500kbit ceil 3000kbit prio 3 burst 1492
+
+     tc qdisc add dev eth0 parent 1:10 handle 10: sfq perturb 10
+     tc qdisc add dev eth0 parent 1:20 handle 20: sfq perturb 10
+     tc qdisc add dev eth parent 1:30 handle 30: sfq perturb 10
+
+These commands tell the Linux kernel to set up the three different traffic classes. The three classes are named "1:10" (highest priority), "1:20" and "1:30" (lowest priority). All the classes are child classes of one root class called "1:1". The default class is set to 30. This means that all the traffic is goes into class 1:30 unless we say otherwise.
+
+Setting the rates for the classes can be a bit tricky. For starters, the overall rate of the class 1:1 must be at least 10% lower than the upstream bandwidth of you internet connection. In this example, our upstream is 5000 Kbit/s. So 4500 Kbit/s is a good value. Next are the rates of the other classes. Their rates must not exceed the rate of the class 1:1, in this example: 3000 Kbit/s + 1000 Kbit/s + 500 Kbit/s = 4500 Kbit/s, so everything is correct. The ceil rate is the rate that a class can use when the other classes are not using their rate. In our example the traffic in the "bulk" class 1:30 can use up to 3000 Kbit/s if the other two classes are not using it. The ceil rates of the three classes must not be larger than the rate of the root class 1:1.
+
+Finally we need to select which packets go into which class. This is done using iptables' MARK target and tc's filter feature.
+
+     # set up the filters
+     tc filter add dev eth0 protocol ip parent 1:0 prio 1 handle 10 fw flowid 1:10
+     tc filter add dev eth0 protocol ip parent 1:0 prio 1 handle 20 fw flowid 1:20
+     tc filter add dev eth0 protocol ip parent 1:0 prio 1 handle 30 fw flowid 1:30
+
+     # Clear any previously defined entries in the "mangle" table
+     iptables -F POSTROUTING -t mangle
+
+     # TCP-ACK packets to the class 1:10
+     iptables -A POSTROUTING -t mangle -o eth0 -p tcp -m length --length :64 -j MARK --set-mark 10
+
+     # ICMP packets to class 1:10
+     iptables -A POSTROUTING -t mangle -o eth0 -p icmp -j MARK --set-mark 10
+
+     # UDP and TCP port 53 (for faster DNS lookups) into class 1:10
+     iptables -A POSTROUTING -t mangle -o eth0 -p udp --dport 53 -j MARK --set-mark 10
+     iptables -A POSTROUTING -t mangle -o eth0 -p tcp --dport 53 -j MARK --set-mark 10
+
+     # SSH connections into class 1:10 for faster typing speeds
+     iptables -A POSTROUTING -t mangle -o eth0 -p tcp --dport 22 -j MARK --set-mark 10
+
+     # HTTP (port 80) and HTTPS (port 443) should a little bit faster than bulk traffic
+     iptables -A POSTROUTING -t mangle -o eth0 -p tcp --dport 80 -j MARK --set-mark 20
+     iptables -A POSTROUTING -t mangle -o eth0 -p tcp --dport 443 -j MARK --set-mark 20
+
+And that's it. If you copy these commands to a script and run it on your linux machine, you should see the ping times decrease rapidly on your network. Downloads will work a little faster and people should be able to use the network again. This method has it's limitation – you really should not try to put 200 or more people on a network with only 5 Mbit/s of upstream. But using these tricks you can maybe ease the pain a little.

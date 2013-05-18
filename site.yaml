@@ -69,4 +69,4 @@ tagger:
 publisher:
     uwekamper:
         type: hyde.ext.publishers.pyfs.PyFS
-        url: sftp://uk@uwekamper.de//home/uk/uwekamper.de/htdocs/beta/
+        url: sftp://uk@uwekamper.de//home/uk/uwekamper.de/htdocs/

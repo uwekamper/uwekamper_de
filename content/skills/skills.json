@@ -2,8 +2,8 @@
 	{ 
 			"id": "java",
 			"name": "Java", 
-			"description": "Since Java is used in ",
-			"long_description": "Lorem impsum dolor sit amet.",
+			"description": "",
+			"long_description": "Most of my Java experience comes from writing web-based enterprise applications at Siemens Corporate Research, Inc. in Princeton, NJ, USA.",
 			"type": "lang",
 			"related": [],
 			"level": 3,
@@ -12,8 +12,9 @@
 	{ 
 			"id": "python",
 			"name": "Python", 
-			"description": "Python is a general-purpose, high-level programming language whose design philosophy emphasizes code readability (Wikipedia). I often use Python in conjunction with frameworks like Django but a large number of my projects are written in plain Python. Twisted",
-			"long_description": "Lorem impsum dolor sit amet.",
+			"description": "My go-to language for solving most problems.",
+			"long_description": "I often use Python in conjunction with frameworks like Django but a large number of my projects are written in plain Python.\n\nProjects include:\n\n  - Complex network and traffic management software written for [ITfM GmbH](http://itfm.de) running on Linux routers and servers distributed throughout Germany. About 3500 customers use the system every day to get high-speed internet access in rural areas.\n  - [hashtagpedia.org](http://www.hashtagpedia.org/), a small side-project written wíth the help of Django.",
+			"related": ["perl"],
 			"type": "lang",
 			"level": 3,
 			"love": true
@@ -21,9 +22,10 @@
 	{
 			"id": "javascript",
 			"name": "JavaScript", 
-			"description": "The JavaScript code on this website jQuery, Backbone.js, underscore.js ",
-			"long_description": "Lorem impsum dolor sit amet.",
+			"description": "JavaScript powers this website.",
+			"long_description": "This website uses JavaScript to render [the raw JSON file](skills/skills.json) into a useful, searchable list of skills. I makes use of jQuery, Backbone.js, and underscore.js",
 			"type": "lang",
+			"related": ["html"],
 			"level": 2,
 			"love": true
 	},
@@ -31,7 +33,7 @@
 			"id": "shell",
 			"name": "Unix Shell", 
 			"description": "Unix shells like BASH, ASH, etc. for automating administrative tasks.",
-			"long_description": "Using and programming shell scripts ",
+			"long_description": "I am using BASH and similar UNIX shells to automate every-day tasks.",
 			"type": "lang",
 			"level": 3,
 			"love": false
@@ -40,7 +42,7 @@
 			"id": "r",
 			"name": "R (Statistics)", 
 			"description": "R is the name of a statistics software as well as an aspect oriented language.",
-			"long_description": "Lorem impsum dolor sit amet.",
+			"long_description": "R (http://www.r-project.com/) is the name of a statistics software package and an implementation of the aspect oriented 'S'-language. I have used R in many projects ranging vom epidemiology over computation biology to business intelligence.",
 			"type": "lang",
 			"related": ["matlab"],
 			"level":  2,
@@ -49,8 +51,9 @@
 	{
 			"id": "html",
 			"name": "HTML, CSS", 
-			"description": "HTML, the basic presentation layer of the web. I also use CSS frameworks like Twitter's Bootstrap and blueprint-css.",
-			"long_description": "Lorem impsum dolor sit amet.",
+			"description": "HTML, the basic presentation layer of the web.",
+			"long_description": "HTML, the basic presentation layer of the web. I started learning HTML back in 1997 when I built the homepage of the village I was living in: [wichte.de](http://web.archive.org/web/19981212034105/http://www.wichte.de/)\n \n Since then I have kept up with HTML's gradual development (like xHTML and CSS) and also used CSS frameworks like Twitter's Bootstrap and blueprint-css.",
+			"related": ["bootstrap"],
 			"type": "lang",
 			"level": 3,
 			"love": true
@@ -68,17 +71,18 @@
 	{
 			"id": "matlab",
 			"name": "Matlab/Octave", 
-			"description": "I used Matlab (and its open-source alternative Octave) extensively in lectures on numerics and simulations.",
-			"long_description": "Lorem impsum dolor sit amet.",
+			"description": "Used extensively in lectures on numerics and simulations.",
+			"long_description": "I used Matlab (and its open-source alternative Octave) extensively in university lectures on numerics and simulations.",
 			"type": "lang",
-			"level": 3,
+			"related": ["r"],
+			"level": 1,
 			"love": false
 	},
 	{
 			"id": "silverstripe",
 			"name": "Silverstripe (Content Management System)",
-			"description": "Silverstripe",
-			"long_description": "Silverstripe long description",
+			"description": "Silverstripe is a simple-to-use CMS.",
+			"long_description": "Silverstripe is a PHP-based content management system (CMS) for websites. It has become my go-to solution for small company websites.\n\nExamples:\n\n  - [oberellenbach.de](http://oberellenbach.de)\n  - [hufmann-kutschfahrten.de](http://www.hufmann-kutschfahrten.de)\n  - [rehwald-moeller.de](http://rehwald-moeller.de)\n  - [toepferei-geissler.de](http://toepferei-geissler.de)\n",
 			"type": "app",
 			"related": ["php", "html"],
 			"level": 3,
@@ -88,35 +92,37 @@
 			"id": "perl",
 			"name": "Perl", 
 			"description": "Perl is a language I used mainly for writing early web applications and data preprocessing.",
-			"long_description": "Lorem impsum dolor sit amet.",
+			"long_description": "Perl was the first language that I used to write web applications in (CGI scripts). I also used it to do complex data and text processing tasks. For all of these tasks it has since become superseeded by Python.",
 			"type": "lang",
+			"related": ["python"],
 			"level": 2,
 			"love": false
 	},
 	{
 			"id": "php",
 			"name": "PHP", 
-			"description": "Silverstripe-CMS, Wordpress",
-			"long_description": "Lorem impsum dolor sit amet.",
+			"description": "A love-hate relationship. :-)",
+			"long_description": "Honestly, I have love-hate relationship with PHP. I dislike the programming language but I have to acknowledge the ease with which you can deploy PHP web-apps and the many great open-source apps that are written in PHP (e.g. Wordpress).",
 			"type": "lang",
 			"related": ["wordpress", "silverstripe"],
 			"level": 2,
 			"love": false
 	},
 	{
-			"id": "gpgpu",
+			"id": "cuda",
 			"name": "GPGPU computing with CUDA", 
-			"description": "General-Purpose Graphics Processing Unit (GPGPU) computing uses commodity grapics cards for high-performance computing.",
-			"long_description": "Lorem impsum dolor sit amet.",
+			"description": "General-Purpose Graphics Processing Unit (GPGPU) computing using grapics cards.",
+			"long_description": "General-Purpose Graphics Processing Unit (GPGPU) computing uses commodity grapics cards to do high-performance computing.",
 			"type": "framework",
-			"level":  3,
+			"related": ["c", "cpp"],
+			"level":  1,
 			"love":  false
 	},
 	{
 			"id": "unix",
 			"name": "Unix: Mac OS X, BSD, and Linux", 
 			"description": "Unix is my favourite kind of operating system.",
-			"long_description": "Lorem impsum dolor sit amet.",
+			"long_description": "Unix is my favourite kind of operating system. That's it.",
 			"type": "os",
 			"level":  3,
 			"love":  true
@@ -124,21 +130,22 @@
 	{
 			"id": "c",
 			"name": "C",
-			"description": "The lingua franca of Unix system programming.",
-			"long_description": "Lorem impsum dolor sit amet.",
+			"description": "The lingua franca of system programming.",
+			"long_description": "I learned C from ground up during my ['MaTA' apprenticeship at Lichtenberg school, Kassel, Germany](http://web.lg-ks.de/index.php?option=com_content&view=article&id=206&Itemid=97) (Website in German only). Because C is used almost everywhere, my C skills come ",
 			"type": "lang",
+			"related": ["cpp", "cuda", "arduino"],
 			"level": 2,
 			"love": true
 	},
 	{
 			"id": "cpp",
 			"name": "C++",
-			"description": "C++",
-			"long_description": "Lorem impsum dolor sit amet.",
+			"description": "C++, when C just isn't complicated enough :-)",
+			"long_description": "Like C, I learned C++ from during my ['MaTA' apprenticeship at Lichtenberg school, Kassel, Germany](http://web.lg-ks.de/index.php?option=com_content&view=article&id=206&Itemid=97) (Website in German only).\n\nSome of the projects I have done in C++ include:\n\n  - Developing medical software at [Scopis GmbH](http://www.scopis.com/) that involved computer vision, 3D visualization, and linear algebra\n  - Porting parts of open-source ray-tracer to the GPU using CUDA as two-week university project.\n",
 			"type": "lang",
-			"related": ["qt"],
-			"level": 2,
-			"love": true
+			"related": ["c", "qt", "cuda"],
+			"level": 3,
+			"love": false
 	},
 	{
 			"id": "qt",
@@ -154,19 +161,28 @@
 			"id": "wordpress",
 			"name": "Wordpress",
 			"description": "Wordpress, the blogging engine.",
-			"long_description": "Wordpress long description",
+			"long_description": "I used Wordpress to develop the website for [CPC-Konstanz](http://www.cpc-konstanz.de/), a part of the \"Hochschule Konstanz Technik, Wirtschaft und Gestaltung\" (University of Applied Sciences) in Konstanz, Lake Constance, Germany",
 			"type": "app",
 			"related": ["php"],
 			"level": 3,
 			"love": false
 	},
 	{
-			"id": "quark",
-			"name": "Quark Xpress",
-			"description": "bla",
-			"long_description": "blabla",
+			"id": "arduino",
+			"name": "Arduino", 
+			"description": "The microcontroller board made for artists and tinkerers.",
+			"long_description": "Arduino, a microcontroller board based on the Atmel ATMega platform. It is programmed in C/C++ using a custom IDE.\n\nSome of my previous Arduino projects are:\n\n  - A battery monitor for remote locations that delivers data via GSM/GPRS.\n  - A [count-down timer](https://github.com/uwekamper/hackandtell) for the Berlin Hack-And-Tell event.\n",
+			"type": "framework",
+			"level": 2,
+			"love": true
+	},
+	{
+			"id": "latex",
+			"name": "LaTeX",
+			"description": "The classic scientific print layouting system.",
+			"long_description": "Since the beginning of my studies at Freie Universität Berlin, I have been using LaTeX instead classic word-processing software like MS Word. All of my official letters, invoices, university assignments and of course my [bachelor's thesis](http://publications.mi.fu-berlin.de/154/1/bathesis_kamper.pdf), and my master's thesis are typeset in LaTeX.",
 			"type": "app",
-			"level": 1,
-			"love": false
+			"level": 2,
+			"love": true
 	}
 ]
