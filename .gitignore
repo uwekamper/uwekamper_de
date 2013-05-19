@@ -6,6 +6,8 @@ deploy_tmp/**/*
 .hyde_deps
 *.py[cod]
 
+output/**/*
+
 # C extensions
 *.so
 

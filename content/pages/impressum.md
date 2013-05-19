@@ -1,13 +1,10 @@
----
-extends: base.j2
-default_block: main
-title: Impressum
-description: Impressum
----
+Title: Impressum
 
-<h1 class="start_page">Impressum</h1>
+Impressum
+=========
 
-<h2>Angaben gemäß § 5 TMG:</h2>
+Angaben gemäß § 5 TMG:
+----------------------
 
 <address>Uwe Kamper<br />
 	Leberstraße 56<br />

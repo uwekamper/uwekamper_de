@@ -1,0 +1,144 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  {% block starthead %}{% endblock starthead %}
+  <meta charset="{# resource.meta.charset #}">
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="{# resource.meta.compatibility #}">
+
+  <!-- encoding must be specified within the first 512 bytes
+        www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#charset -->
+
+  <!-- meta element for compatibility mode needs to be before
+        all elements except title & meta
+        msdn.microsoft.com/en-us/library/cc288325(VS.85).aspx -->
+  <!-- Chrome Frame is only invoked if meta element for
+        compatibility mode is within the first 1K bytes
+        code.google.com/p/chromium/issues/detail?id=23003 -->
+
+  <title>{% block title %}Titel{% endblock %}</title>
+  <meta name="description" content="{# resource.meta.description #}">
+  <meta name="author" content="{# resource.meta.author #}">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="{# resource.meta.viewport #}">
+  
+  {% block favicons %}
+  <!-- Place favicon.ico & apple-touch-icon.png
+        in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="{{ SITEURL }}/theme/img/favicon.ico">
+  <link rel="apple-touch-icon" href="{{ SITEURL }}/theme/img/apple-touch-icon.png">
+  {% endblock favicons %}
+
+  {% block css %}
+	<link rel="stylesheet" href="{{ SITEURL }}/theme/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.css">
+	<!--[if IE 7]>
+	  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome-ie7.css">
+	<![endif]-->
+	<style type="text/css">
+		body {
+			padding-top: 30px;
+			padding-bottom: 0px;
+		}
+	</style>
+  <!-- CSS goes here -->
+	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
+	
+  {% endblock css %}
+
+  {% block headjs %}
+  {% endblock headjs %}
+  {% block endhead %}{% endblock endhead %}
+</head>
+<body id="{# resource.meta.id if resource.meta.id else resource.slug #}">
+  {% block content %}
+  <div class="container">
+		{% block nav %}
+			{# from "macros.j2" import render_nav with context #}
+	    {# render_nav(menu) #}
+		{% endblock %}
+		<div class="shadow">&nbsp;</div> 
+      {% block container %}
+	  <div class="row">
+      <div class="span12" id="main" role="main">
+          <header class="banner clearfix">
+          {% block header -%}
+          {%- endblock %}
+          </header>
+          {% block main %}
+          {% endblock main %}
+      </div><!-- /main -->
+	  </div><!-- /.row -->
+	{% endblock container %}
+	
+	</div><!-- /container -->
+  
+  {% endblock content%}
+  
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="span3">
+					<h3>Stay Connected</h3>
+					<p><a href="/blog/atom.xml"><img src="{{ SITEURL }}/img/rss.png" 
+						class="text-icon">Subscribe to the blog</a></p>
+					<p><a href="http://twitter.com/little_endian/" rel="me"><img src="{{ SITEURL }}/theme/img/twitter.png" 
+						class="text-icon">Follow me on Twitter</a></p>
+					<p><a href="http://github.com/uwekamper/" rel="me"><img src="{{ SITEURL }}/theme/img/github.png" 
+						class="text-icon">My code on GitHub</a></p>
+				</div>
+				<div class="span3">
+					<h3>&nbsp;</h3>
+					<p><a href="http://facebook.com/uwekamper/" rel="me"><img src="{{ SITEURL }}/theme/img/facebook.png" 
+						class="text-icon">Find me on Facebook …</a></p>
+					<p><a href="http://uwekamper.de/+" rel="me"><img src="{{ SITEURL }}/theme/img/googleplus.png" 
+						class="text-icon">… and on Google+</a></p>
+				</div>
+				<div class="span4 offset2">
+					<h3>Contact Me</h3>
+					<address><strong>Uwe Kamper</strong><br>
+						Leberstr. 56 | D-10829 Berlin, Germany<br>
+						<br>
+						Tel.: +49 (0) 30 69 20 65 96<br>
+						<a href="mailto:info@uwekamper.de">info@uwekamper.de</a>
+						</address>
+				</div>
+				
+			</div><!-- /.row -->
+			<div class="row">
+				<div class="span12" id="copyright">
+					Copyright &copy; 2012 by Uwe Kamper&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp;&nbsp;<a href="/impressum.html">Impressum</a>
+				</div>
+			</div><!-- /.row -->
+		</div><!-- /container -->
+	</div><!-- /footer -->
+	
+  {% block js %}
+  <!-- Javascript at the bottom for fast page loading -->
+  {% block jquery %}
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	{% block extrajs %}
+	{% endblock extrajs %}
+  {% endblock jquery %}
+	<!--scripts-->
+  {% block scripts %}
+  {% endblock scripts %}
+
+
+  <!--[if lt IE 7 ]>
+    <script src="js/libs/dd_belatedpng.js"></script>
+    <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+  <![endif]-->
+
+  {% block analytics %}  {% endblock analytics %}
+
+  {% endblock js %}
+</body>
+</html>

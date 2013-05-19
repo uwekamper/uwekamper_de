@@ -1,6 +1,4 @@
-{% extends "base.j2" %}
-
-{% block container %}
+Title: CV
 
 <h1 class="start_page">Curriculum Vitae</h1>
 <ul class="nav nav-tabs" id="myTab">
@@ -186,7 +184,7 @@
 	</div><!-- /container classic-->
 </div><!-- /myTabContent -->
 </div><!-- /container -->
-{% endblock %}
+
 
 {% block extrajs %}
 <script src="{{ media_url('bootstrap/js/bootstrap-tab.js') }}"></script>

@@ -1,9 +1,4 @@
----
-extends: base.j2
-default_block: main
-title: Contact
-description: Contact information
----
+Title: Contact
 
 <blockquote class="pull-right" cite="http://en.wikipedia.org/wiki/Ring_Ring_Ring_(Ha_Ha_Hey)">
 	<p>Hey how ya doing&nbsp;&nbsp;/&nbsp;&nbsp;Sorry you can't get through<br />
