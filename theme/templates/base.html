@@ -60,7 +60,7 @@
   {% block content %}
   <div class="container">
 		{% block nav %}
-			{# from "macros.j2" import render_nav with context #}
+			{% include "main_menu.html" %}
 	    {# render_nav(menu) #}
 		{% endblock %}
 		<div class="shadow">&nbsp;</div> 
@@ -86,7 +86,7 @@
 			<div class="row">
 				<div class="span3">
 					<h3>Stay Connected</h3>
-					<p><a href="/blog/atom.xml"><img src="{{ SITEURL }}/img/rss.png" 
+					<p><a href="/blog/atom.xml"><img src="{{ SITEURL }}/theme/img/rss.png" 
 						class="text-icon">Subscribe to the blog</a></p>
 					<p><a href="http://twitter.com/little_endian/" rel="me"><img src="{{ SITEURL }}/theme/img/twitter.png" 
 						class="text-icon">Follow me on Twitter</a></p>

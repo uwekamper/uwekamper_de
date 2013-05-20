@@ -1,4 +1,5 @@
 Title: Contact
+Date: 2013-05-20
 
 <blockquote class="pull-right" cite="http://en.wikipedia.org/wiki/Ring_Ring_Ring_(Ha_Ha_Hey)">
 	<p>Hey how ya doing&nbsp;&nbsp;/&nbsp;&nbsp;Sorry you can't get through<br />
@@ -31,7 +32,7 @@ Title: Contact
 		<a href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a>.</p>
 <p>This site uses <a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome</a> and 
 	<a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
-<p><a href="http://www.python.org/"><img src="{{ media_url('img/python-powered-w-70x28.png') }}" 
+<p><a href="http://www.python.org/"><img src="{{ SITEURL }}/theme/img/python-powered-w-70x28.png" 
 	width="70" height="28" title="The Python-powered logo"></a>
 	This site is generated using the <a href="http://hyde.github.com/">Hyde static site generator</a>. 
 	The static HTML files are served by a <a href="http://www.cherokee-project.com/">Cherokee webserver</a>.

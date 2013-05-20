@@ -44,4 +44,14 @@ PLUGIN_PATH = 'plugins'
 
 PLUGINS = []
 
+TEMPLATE_PAGES = {
+	'static_pages/contact.md': 'contact.html',
+	'static_pages/cv.md': 'cv.html',
+	'static_pages/impressum.md': 'impressum.html',
+}
 
+MENUITEMS = [('home', 'index.html'), 
+			 ('blog', 'contact.html'),
+			 ('cv', 'cv.html'),
+			 ('skills', 'skills/index.html'),
+			 ('contact', 'contact.html'), ]

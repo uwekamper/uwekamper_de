@@ -1,0 +1,18 @@
+<!--style="background-image: url('{{ SITEURL }}/theme/img/grid.gif'); background-position: 0px 2px;"-->
+<div class="row">
+	<div class="span6">
+		<a href="{{ SITEURL }}"><img id="logo" src="{{ SITEURL }}/theme/img/logo.png" /></a>
+	</div>
+	<div class="span6" role="nav">
+	    <ul id="main_nav">
+        {% for title, link in MENUITEMS %}
+        <li>
+            <a title="{{ title }}"
+                class="{% if page %}{% if page.url == link %}class="active"{% endif %}{% endif %}"
+                href="{{ SITEURL }}/{{ link }}"><span class="inner_nav_link">{{ title }}</span></a>
+        </li>
+        {% endfor %}
+	    </ul>
+	
+	</div>
+</div><!-- /row -->

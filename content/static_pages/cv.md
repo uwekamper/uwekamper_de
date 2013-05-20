@@ -1,4 +1,5 @@
 Title: CV
+Date: 2013-05-20
 
 <h1 class="start_page">Curriculum Vitae</h1>
 <ul class="nav nav-tabs" id="myTab">
@@ -9,10 +10,10 @@ Title: CV
 	<div class="tab-pane fade" id="timeline">
 		<div id="cv_key" class="well">
 			<h3>Color Key</h3>
-			<div style="background-color: #DFF0D8; height:30px;"><img src="{{ media_url('img/gradhat.png') }}" /> Education</div>
-			<div style="background-color: #FCF8E3; height:30px;"><img src="{{ media_url('img/necktie.png') }}" /> Professional</div>
-			<div style="background-color: #87B43F; height:30px;"><img src="{{ media_url('img/personal.png') }}" /> Personal</div>
-			<div style="background-color: #9CCDF0; height:30px;"><img src="{{ media_url('img/baby.png') }}" /> Birth</div>
+			<div style="background-color: #DFF0D8; height:30px;"><img src="{{ SITEURL }}/theme/img/gradhat.png" /> Education</div>
+			<div style="background-color: #FCF8E3; height:30px;"><img src="{{ SITEURL }}/theme/img/necktie.png" /> Professional</div>
+			<div style="background-color: #87B43F; height:30px;"><img src="{{ SITEURL }}/theme/img/personal.png" /> Personal</div>
+			<div style="background-color: #9CCDF0; height:30px;"><img src="{{ SITEURL }}/theme/img/baby.png" /> Birth</div>
 		</div>
 	<div class="row">
 		<div class="span12 cv_fade">&nbsp;</div>
@@ -60,7 +61,7 @@ Title: CV
 	</div>
 	</div><!-- /container timeline -->
 	<div class="tab-pane fade" id="classic">
-		<h3><img src="{{ media_url('img/gradhat.png') }}" /> Education</h3>
+		<h3><img src="{{ SITEURL }}/theme/img/gradhat.png" /> Education</h3>
 		<table class="table">
 			<tbody>
 				<tr>
@@ -115,7 +116,7 @@ Title: CV
 				</tr>
 			</tbody>
 		</table>
-		<h3><img src="{{ media_url('img/necktie.png') }}" /> Professional Experience</h3>
+		<h3><img src="{{ SITEURL }}/theme/img/necktie.png" /> Professional Experience</h3>
 		<table class="table">
 			<tbody>
 				<tr>
@@ -187,7 +188,7 @@ Title: CV
 
 
 {% block extrajs %}
-<script src="{{ media_url('bootstrap/js/bootstrap-tab.js') }}"></script>
+<script src="{{ SITEURL }}/theme/bootstrap/js/bootstrap-tab.js"></script>
 <script>        
 $(document).ready(function () {
 	$('#myTab a').click(function (e) {
