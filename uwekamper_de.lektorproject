@@ -1,2 +1,6 @@
 [project]
 name = uwekamper_de
+url = "https://uwekamper.de/"
+
+[packages]
+lektor-atom = 0.4.0
