@@ -1,0 +1,20 @@
+{% macro render_nav(menu, cls=None) %}
+<!--style="background-image: url('{{ '/static/img/grid.gif'|url }}'); background-position: 0px 2px;"-->
+<div class="row">
+	<div class="span6">
+		<a href="{{ '/'|url }}"><img id="logo" src="{{ '/static/img/logo.png'|url }}" /></a>
+	</div>
+	<div class="span6" role="nav">
+    <ul id="main_nav">
+    {% for item in bag('nav.items') %}
+    
+      <li>
+        <a title="{{ item.description }}"
+          class="{% if item.url == this.url_path %}active {% endif %}{{ item.css_class}}"
+          href="{{ item.url }}"><span class="inner_nav_link">{{ item.name }}</span></a>
+      </li>
+    {% endfor %}
+    </ul>
+	</div>
+</div><!-- /row -->
+{% endmacro %}

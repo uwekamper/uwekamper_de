@@ -1,0 +1,35 @@
+_model: home
+---
+title: Uwe Kamper
+---
+body:
+
+<div class="row">
+	<div class="span4" >
+
+		<img id="portrait" src="/static/img/portrait.jpg" width="290px"/>
+	</div>
+	<div class="span8" style="height: 438px;">
+		<blockquote class="pull-right" id="talkingheads" cite="http://en.wikipedia.org/wiki/This_Must_Be_the_Place_(Naive_Melody)">
+				  <p>Never for money, always for love</p>
+				  <small><a href="http://en.wikipedia.org/wiki/This_Must_Be_the_Place_(Naive_Melody)">Talking Heads</a></small>
+				</blockquote>
+		<h1 class="tagline">Hello, my name is Uwe&nbsp;Kamper and I will gladly take your money.</h1>
+	</div> 
+</div>
+<div class="row">
+	<div class="span12">
+		<p class="frontpage">In return I'll build breath-taking applications for you using technologies like
+			<em>Python</em>, <em>Java</em>, <em>C++</em>, <em>Javascript</em>, and many more.
+			Here is a <a href="./skills/">full list of my skills</a>.</p>
+		<p class="frontpage">I studied <em>Bioinformatics</em> at 
+			Freie Universität, Berlin where I learned how to solve complex problems using methods from
+			<em>statistics</em>, <em>machine learning</em>, and <em>computational biology</em>. 
+			I also helped start and <em>launch a company</em> back in 2003 that still exists today. 
+			To learn more about my life, have a look at my <a href="./cv.html"><i>Curriculum&nbsp;vitae</i></a>.</p>
+		<p class="frontpage">I am based in <a title="Show a map of Berlin" href="http://maps.here.com/germany/berlin"><i class="icon-map-marker icon-large"></i> Berlin, Germany</a> 
+			and sometimes I write about my craft in <a href="./blog">my blog</a>.</p>
+		<p class="frontpage">Are you looking for a <em>freelance software developer</em> that is smart and gets things done? 
+			Then you should <a href="./contact.html">contact me now</a>!</p>
+	</div>
+</div>

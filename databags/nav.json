@@ -1,0 +1,28 @@
+{
+    "items": [
+        {
+            "description": "Bla",
+            "url": "/",
+            "name": "home",
+            "css_class": "home"
+        },
+        {
+            "description": "Blog",
+            "url": "/blog/",
+            "name": "blog",
+            "css_class": "blog"
+        },
+        {
+            "description": "Skills",
+            "url": "/skills/",
+            "name": "skills",
+            "css_class": "skills"
+        },
+        {
+            "description": "Contact",
+            "url": "/contact/",
+            "name": "contact",
+            "css_class": "contact"
+        }
+    ]
+}

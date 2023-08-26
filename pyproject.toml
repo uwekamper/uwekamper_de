@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "uwekamper-de"
+version = "0.1.0"
+description = ""
+authors = ["Uwe Kamper <me@uwekamper.de>"]
+readme = "README.md"
+# packages = [{include = "uwekamper_de"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+lektor = "^3.3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
