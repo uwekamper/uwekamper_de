@@ -4,3 +4,10 @@ url = "https://uwekamper.de/"
 
 [packages]
 lektor-atom = 0.4.0
+
+
+[servers.production]
+name = Production
+enabled = yes
+default = yes
+target = rsync://uwekamper.de/var/www/uwekamper_de/htdocs
