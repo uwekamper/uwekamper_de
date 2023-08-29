@@ -33,11 +33,11 @@ body:
 	licensed under the Creative Commons Attribution Share-Alike 3.0 Unported License.
 	To view a copy of this license, visit 
 		<a href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a>.</p>
-<p>This site uses <a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome</a> and 
-	<a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
-<p><a href="http://www.python.org/"><img src="/static/img/python-powered-w-70x28.png" 
+<p>This site uses <a href="https://github.com/fortawesome/Font-Awesome/">Font-Awesome</a> and 
+	<a href="https://github.com/twbs/bootstrap">Twitter Bootstrap</a>.</p>
+<p><a href="https://www.python.org/"><img src="/static/img/python-powered-w-70x28.png" 
 	width="70" height="28" title="The Python-powered logo"></a>
 	This site is generated using the <a href="https://www.getlektor.com/">Lektor static site generator</a>. 
-	The static HTML files are served by a <a href="http://www.cherokee-project.com/">Cherokee webserver</a>.
+	The static HTML files are served by a <a href="https://nginx.org">NGINX webserver</a>.
 
 	
