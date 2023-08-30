@@ -1,27 +1,32 @@
 {% macro render_blog_post(post, from_index=false) %}
-  <div class="blog-post">
-  {% if from_index %}
-    <h3><a href="{{ post|url }}">{{ post.title }}</a></h3>
-  {% else %}
-    <h3>{{ post.title }}</h3>
-  {% endif %}
-  <p class="meta">
-    <time datetime="{{ post.pub_date.strftime('%Y-%m-%d') }}">
-      <i class="icon-calendar"></i> {{ post.pub_date.strftime('%a, %d %b %Y') }}
-  </time>
-  by
-    {% if post.twitter_handle %}
-      <a href="https://twitter.com/{{ post.twitter_handle
-        }}">{{ post.author or post.twitter_handle }}</a>
-    {% else %}
-      {{ post.author }}
-    {% endif %}
-    
-  </p>
-  {% if post.excerpt %}{{ post.excerpt }}{% else %}<p>Article preview not available.</p>{% endif %}
-  <p class="read-more">
-	<a class="btn btn-inverse" href="{{ post|url }}">Read more…</a>
-  </p>
+  <div class="blog-post clearfix">
+	<div class="blog-post-inner">
+	{% if from_index %}
+		<h3><a href="{{ post|url }}">{{ post.title }}</a></h3>
+	{% else %}
+		<h3>{{ post.title }}</h3>
+	{% endif %}
+	<p class="meta">
+		<time datetime="{{ post.pub_date.strftime('%Y-%m-%d') }}">
+		<i class="icon-calendar"></i> {{ post.pub_date.strftime('%a, %d %b %Y') }}
+		</time>
+		by
+			{% if post.twitter_handle %}
+			<a href="https://twitter.com/{{ post.twitter_handle
+				}}">{{ post.author or post.twitter_handle }}</a>
+			{% else %}
+			{{ post.author }}
+			{% endif %}
+	</p>
+	{% if post.preview_image %}<img class="preview_image img-responsive-small" src="{{ post|url }}{{ post.preview_image }}" />{% endif %}
+	{% if post.excerpt %}{{ post.excerpt }}{% else %}<p>Article preview not available.</p>{% endif %}
+  </div>
+  <div class="blog-post-inner">
+	<p class="read-more">
+		<a class="btn btn-inverse" href="{{ post|url }}">Read more…</a>
+	</p>
+	</div>
+
 </div>
 {% endmacro %}
 
@@ -47,6 +52,9 @@
 			{% endfor %} -->
 			</ul>
       {% endif %}
+	  {% if post.preview_image %}
+	  <img class="img-responsive" src="{{ post.preview_image|url }}" />
+	  {% endif %}
       {{ post.body }}
 		</article>
 	</div>
