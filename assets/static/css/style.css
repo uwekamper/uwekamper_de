@@ -306,3 +306,40 @@ div.skill:hover {
 h1.start_page {
 	margin-bottom: 20px;
 }
+
+p.meta {
+	margin-bottom: 8px;
+	margin-left: 1px;
+}
+
+.read-more {
+	text-align: right;
+	margin-right: 15px;
+}
+
+.blog-post {
+	padding-bottom: 30px;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 30px;
+}
+
+.sidebar-title {
+	border-bottom: 2px solid #333;
+	margin-bottom: 5px;
+}
+
+.tag {
+	background: #333;
+	color: #fff;
+	font-size: medium;
+	display: inline-block;
+	padding: 6px;
+	margin-bottom: 4px;
+	border: 2px solid #333;
+}
+
+.tag:hover {
+	background: none;
+	color: #333;
+	border: 2px solid #333;
+}

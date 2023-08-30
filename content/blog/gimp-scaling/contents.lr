@@ -8,6 +8,13 @@ author: Uwe Kamper
 ---
 tags: thoughts
 ---
+excerpt:
+
+During the making of this website I tried to scale down an image of 
+500 by 500 pixels to the size of 32 by 32 pixels. Scaling the image
+down using the GIMP's image-scaling feature did not work so well.
+
+---
 body:
 
 The Problem

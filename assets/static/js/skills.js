@@ -115,6 +115,7 @@ var SkillListView = Backbone.View.extend({
 	
 	addOne: function(skill) {
 		var view = new SkillView({model: skill});
+		console.log("rendering " + JSON.stringify(skill));
 		this.$("#skills_list").append(view.render().el);
 	},
 	
