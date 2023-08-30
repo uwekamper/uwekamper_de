@@ -31,10 +31,11 @@
 	<div class="span9">
 		<article class="post">
 			<h1 class="title">{{ post.title }}</h1>
-			<time datetime="{{ post.pub_date.strftime('%Y-%m-%d') }}">
-			    <i class="icon-calendar"></i> {{ post.pub_date.strftime('%a, %d %b %Y') }}
-			</time>
-
+			<p class="meta">
+				<time datetime="{{ post.pub_date.strftime('%Y-%m-%d') }}">
+					<i class="icon-calendar"></i> {{ post.pub_date.strftime('%a, %d %b %Y') }}
+				</time>
+			</p>
 			{% if post.tags %}
 			<ul class="tags clear">
 			<!-- {% for tag in resource.meta.tags %}
