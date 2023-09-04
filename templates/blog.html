@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {% from "macros/blog.html" import render_blog_post %}
 {% from "macros/pagination.html" import render_pagination %}
+{% from "macros/categories.html" import render_sidebar_category_nav %}
 {% block title %}{{ this.title }}{% endblock %}
 
 {% block main %}
@@ -20,14 +21,7 @@
     {{ render_pagination(this.pagination) }}
   </div>
   <div class="span3">
-    <h4 class="sidebar-title">TAGS</h4>
-
-    <a href="#"><div class="tag">client-project</div></a>
-    <a href="#"><div class="tag">thoughts</div></a>
-    <a href="#"><div class="tag">side-project</div></a>
-    <a href="#"><div class="tag">art</div></a>
-    <a href="#"><div class="tag">technology</div></a>
-
+    {{ render_sidebar_category_nav() }}
   </div>
 </div>
 

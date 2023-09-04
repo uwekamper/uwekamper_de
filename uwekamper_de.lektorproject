@@ -4,6 +4,7 @@ url = "https://uwekamper.de/"
 
 [packages]
 lektor-atom = 0.4.0
+lektor-static-search = 0.1
 
 
 [servers.production]

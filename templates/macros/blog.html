@@ -18,7 +18,7 @@
 			{{ post.author }}
 			{% endif %}
 	</p>
-	{% if post.preview_image %}<img class="preview_image img-responsive-small" src="{{ post|url }}{{ post.preview_image }}" />{% endif %}
+	{% if post.preview_image %}<a href="{{ post|url }}"><img class="preview_image img-responsive-small" src="{{ post|url }}{{ post.preview_image }}" /></a>{% endif %}
 	{% if post.excerpt %}{{ post.excerpt }}{% else %}<p>Article preview not available.</p>{% endif %}
   </div>
   <div class="blog-post-inner">
@@ -43,13 +43,13 @@
 			</p>
 			{% if post.tags %}
 			<ul class="tags clear">
-			<!-- {% for tag in resource.meta.tags %}
+			{% for tag in post.tags %}
 			<li>
-			    <a class="small" href="{{ content_url('blog/tags/'~tag~'.html') }}">
+			    <a class="small" href="{{ 'blog/tags/'~tag~'.html'|url }}">
 			        {{ tag }}
 			    </a>
 			</li>
-			{% endfor %} -->
+			{% endfor %}
 			</ul>
       {% endif %}
 	  {% if post.preview_image %}

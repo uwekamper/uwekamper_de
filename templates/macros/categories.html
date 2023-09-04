@@ -1,0 +1,24 @@
+{% macro render_category_nav(active=none) %}
+  <ul>
+  {% for category in site.query('/blog-categories') %}
+    <li{% if category._id == active %} class="active"{% endif %}>
+      <a href="{{ category|url }}">{{ category.name }}</a>
+    </li>
+  {% endfor %}
+  </ul>
+{% endmacro %}
+
+{% macro render_sidebar_category_nav(active=none) %}
+<h4 class="sidebar-title">TAGS</h4>
+{% for category in site.query('/blog-categories') %}
+<a href="{{ category|url }}"><div class="tag">{{ category.name }}</div></a>
+{% endfor %}
+{% endmacro %}
+
+{% macro render_blogpost_list(blog_posts) %}
+  <ul>
+    {% for post in blog_posts %}
+      <li><a href="{{ post|url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
