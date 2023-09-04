@@ -7,6 +7,7 @@ author: Uwe Kamper
 pub_date: 2013-04-09
 ---
 tags:
+
     - linux
     - networking
 ---
@@ -92,3 +93,7 @@ iptables -A POSTROUTING -t mangle -o eth0 -p tcp --dport 443 -j MARK --set-mark 
 ```
 
 And that's it. If you copy these commands to a script and run it on your linux machine, you should see the ping times decrease rapidly on your network. Downloads will work a little faster and people should be able to use the network again. This method has it's limitation – you really should not try to put 200 or more people on a network with only 5 Mbit/s of upstream. But using these tricks you can maybe ease the pain a little.
+---
+categories: networking
+---
+excerpt: The problem is: Most cheap internet connections have asymmetric upload speeds. For example, one conference I attended had a cable line with 100 Mbit/s downstream bandwidth – but only 5 Mbit/s of upstream. As soon as someone starts using the network to upload data to the outside internet, the whole upstream channel is blocked.
