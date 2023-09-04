@@ -344,6 +344,27 @@ p.meta {
 	border: 2px solid #333;
 }
 
+.tag-active {
+   background: #FA023C;
+   color: #fff;
+   border: 2px solid #FA023C;
+}
+
+.tag-display {
+	padding-left: 5px;
+	padding-right: 5px;
+	background: #FA023C;
+	color: #fff;
+	border: 2px solid #FA023C;
+ }
+
+.tag-active:hover {
+	background: none;
+	color: #FA023C;
+	border: 2px solid #FA023C;
+ }
+
+
 .preview_image {
 	margin-bottom: 8px;
 	float: left;
@@ -364,4 +385,9 @@ p.meta {
 
 .blog-post-inner {
 	overflow: auto;
+}
+
+.category-label {
+	margin-right: 4px;
+	border-radius: 0;
 }

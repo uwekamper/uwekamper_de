@@ -1,8 +1,25 @@
 {% extends "layout.html" %}
-{% from "macros/categories.html" import render_category_nav, render_blogpost_list %}
+{% from "macros/blog.html" import render_blog_post %}
+{% from "macros/categories.html" import render_sidebar_category_nav, render_blogpost_list %}
+
 {% block title %}Project Category {{ this.name }}{% endblock %}
+
 {% block main %}
-  <h1>Blog-post Category {{ this.name }}</h1>
-  {{ render_category_nav(active=this.name) }}
-  {{ render_blogpost_list(this.children) }}
+<div class="row">
+  <div class="span12">
+    <h1 class="start_page">Uwe Kamper's Blog / <span class="tag-display">{{ this.name }}</span></h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span9">
+    {{ render_blogpost_list(this.children)}}
+  {# {{ render_pagination(this.pagination) }} #}
+  </div>
+  <div class="span3">
+    {{ render_sidebar_category_nav(active=this.name) }}
+  </div>
+</div>
+
+  
 {% endblock %}

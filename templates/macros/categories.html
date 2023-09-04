@@ -1,3 +1,5 @@
+{% from "macros/blog.html" import render_blog_post %}
+
 {% macro render_category_nav(active=none) %}
   <ul>
   {% for category in site.query('/blog-categories') %}
@@ -9,16 +11,16 @@
 {% endmacro %}
 
 {% macro render_sidebar_category_nav(active=none) %}
-<h4 class="sidebar-title">TAGS</h4>
+<h4 class="sidebar-title">CATEGORIES</h4>
 {% for category in site.query('/blog-categories') %}
-<a href="{{ category|url }}"><div class="tag">{{ category.name }}</div></a>
+<a href="{{ category|url }}"><div class="tag{% if active == category.name %} tag-active{% endif %}">{{ category.name }}</div></a>
 {% endfor %}
 {% endmacro %}
 
 {% macro render_blogpost_list(blog_posts) %}
-  <ul>
     {% for post in blog_posts %}
-      <li><a href="{{ post|url }}">{{ post.title }}</a></li>
+      {{ render_blog_post(post, from_index=true) }}
+    {% else %}
+      <p>Sorry, no posts in this category.</p>
     {% endfor %}
-  </ul>
 {% endmacro %}

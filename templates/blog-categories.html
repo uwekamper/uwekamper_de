@@ -2,7 +2,11 @@
 {% from "macros/categories.html" import render_category_nav %}
 {% block title %}Blog-Post Categories{% endblock %}
 {% block main %}
-  <h1>List of All Blog-Post Categories</h1>
-  
-  {{ render_category_nav(active=none) }}
+<div class="row">
+  <div class="span12">
+    <h1 class="start_page">Uwe Kamper's Blog</h1>
+  </div>
+</div>
+
+{{ render_category_nav(active=none) }}
 {% endblock %}
